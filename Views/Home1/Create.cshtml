@@ -1,0 +1,93 @@
+﻿@model ECommerceShoppingCartAppASPNET7.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    // <style>
+    //     body {
+    //         background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZqUUmMTBqUhJCCr7pPX9phXGpSKwr-u3qfA&usqp=CAU");
+    //     }
+    // </style>
+}
+
+<h1>Create</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Photo" class="control-label"></label>
+                <input asp-for="Photo" class="form-control" />
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+          
+            <div class="form-group">
+                <br />   <br />
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+                /* footer */
+div#footer {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 30px 0 0 0;
+  padding: 0;
+  width: 100%;
+  overflow: auto;
+  background-color: #1D1F20;
+  font-size: 12px;
+}
+
+div.ft-container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px 0;
+/*   background-color: lightBlue; */
+  overflow: auto;
+}
+
+div.social-media, div.product-list, div.company-info {
+  max-width: 35%;
+  margin: 0 15px;
+  padding: 10px 12px;
+  display: inline-block;
+  color: #fff;
+  float: left;
+/*   background-color: pink; */
+}
